@@ -31,7 +31,7 @@ fonts`合并入`Sarasa Term SC`, 再经过一些后处理，而最后形成的�
 - `Sarasa Term SC` 是极少数做到中文和英文 2:1 严格对齐的字体，特别适合用来写代
   码, 以及中英文混合的字符式表格的对齐等。
 - `Nerd fonts` 提供了很多图标字体，特别适合各种
-  Shell(zsh/bash...)/Vim/NeoVim/Emacs 主题， 例如
+  Shell(zsh/bash...)/Vim/NeoVim/Emacs/lsd/eza...的主题， 例如
   [`Powerline`](https://github.com/powerline/powerline)，
   [`Starship`](https://github.com/starship/starship)
 - [ ] 一些符号进行了纵向拉伸，不会出现`Powerline`条带中高低不一，无法上下对齐的情况。
