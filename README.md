@@ -21,7 +21,7 @@ fonts`合并入`Sarasa Term SC`, 再经过一些后处理，而最后形成的�
   ![文字效果](screenshots/character.png)
 - 图标效果：Starship 图标
 
-  ![图标效果](screenshots/nerd.png)
+  ![图标效果](screenshots/nerd.jpg)
 - 对齐效果：终端里 emacs/org-mode 中的表格对齐
 
   ![对齐效果](screenshots/align.png)
