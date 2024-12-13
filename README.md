@@ -29,20 +29,23 @@ fonts`合并入`Sarasa Term SC`, 再经过一些后处理，而最后形成的�
 ## 特性
 
 - `Sarasa Term SC` 是极少数做到中文和英文 2:1 严格对齐的字体，特别适合用来写代
-  码, 以及中英文混合的字符式表格的对齐等。
+  码, 以及中英文混合的字符式表格的对齐等。而且该字体字重全面，共包含十个：
+  ExtraLight, ExtraLightItalic, Light, LightItalic, Regular, Italic, SemiBold,
+  SemiBoldItalic, ExtraBold, ExtraBoldItalic.
 - `Nerd fonts` 提供了很多图标字体，特别适合各种
   Shell(zsh/bash...)/Vim/NeoVim/Emacs/lsd/eza...的主题， 例如
   [`Powerline`](https://github.com/powerline/powerline)，
   [`Starship`](https://github.com/starship/starship)
-- [ ] 一些符号进行了纵向拉伸，不会出现`Powerline`条带中高低不一，无法上下对齐的情况。
+- 对一些符号进行了纵向拉伸，不会出现`Powerline`条带中高低不一，无法上下对齐的情
+  况。
 - 原始`Sarasa Term SC`字体和`Sarasa Term SC Nerd`字体可以共存，不会产生冲突。
 - 将 `OS/2` 表中的 `xAvgCharWidth` 属性进行了设置，避免了在 windows 系统下，一些
   不支持新版本 `OS/2` 表的软件中字距不正常的问题。
 - 加入了`hdmx`表，解决了 windows 系统下的一些情况下无法严格对齐的问题。
 - 修正了`OS/2`表中的`panose`和`post`表中的`isFixedPitch`，使得字体被系统认出是等
   宽字体。
-- 在庞大的 `material design` 图标库中，只跳跃选择一部分图标，以避免`65534`的字符数硬
-  顶。
+- 在庞大的 `material design` 图标库中，只跳跃选择一部分图标，以避免`65534`的字符
+  数硬顶。
 
 ## 安装
 
