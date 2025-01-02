@@ -10,7 +10,7 @@ fonts`合并入`Sarasa Term SC`, 再经过一些后处理，而最后形成的�
 
 上游版本：
 
-- Sarasa Term SC：1.0.24
+- Sarasa Term SC：1.0.27
 - Nerd Font: 3.3.0
 - Font Patcher: 4.16.1
 
