@@ -43,11 +43,8 @@ jobs:
         uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{ github.token }}
-          files: |
-            sarasa-nerd/SarasaTermSCNerd.ttf.tar.gz
-            sarasa-nerd/SarasaTermSCNerd.ttc.tar.gz
-            sarasa-nerd/SarasaTermSCNerd.ttf.7z
-            sarasa-nerd/SarasaTermSCNerd.ttc.7z   
+          file: ./sarasa-nerd/*{.gz,.7z}
+          file_glob: true    
           name: Release ${{ steps.get_version.outputs.VERSION }}
           tag_name: ${{ steps.get_version.outputs.VERSION }}            
           draft: false
@@ -81,12 +78,9 @@ jobs:
       - name: Upload Release Asset
         uses: svenstaro/upload-release-action@v2
         with:
-          repo_token: ${{ github.token }}
-          files: |
-            sarasa-nerd/SarasaTermSCNerd-Unhinted.ttf.tar.gz
-            sarasa-nerd/SarasaTermSCNerd-Unhinted.ttc.tar.gz
-            sarasa-nerd/SarasaTermSCNerd-Unhinted.ttf.7z
-            sarasa-nerd/SarasaTermSCNerd-Unhinted.ttc.7z   
+          repo_token: ${{ github.token }} 
+          file: ./sarasa-nerd/*{.gz,.7z}
+          file_glob: true            
           name: Release ${{ steps.get_version.outputs.VERSION }}
           tag_name: ${{ steps.get_version.outputs.VERSION }}            
           draft: false
