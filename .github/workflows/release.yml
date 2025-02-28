@@ -43,7 +43,7 @@ jobs:
         id: create_release
         uses: softprops/action-gh-release@v2
         with:
-          token: ${{ secrets.RELEASE_TOKEN }}
+          token: ${{ github.token }}
           name: Release ${{ steps.get_version.outputs.VERSION }}
           tag_name: ${{ steps.get_version.outputs.VERSION }}
           draft: false
@@ -52,7 +52,7 @@ jobs:
       - name: Upload Release Asset
         uses: softprops/action-gh-release@v2
         with:
-          token: ${{ secrets.RELEASE_TOKEN }}
+          token: ${{ github.token }}
           files: |
             sarasa-nerd/SarasaTermSCNerd.ttf.tar.gz
             sarasa-nerd/SarasaTermSCNerd.ttc.tar.gz
@@ -88,7 +88,7 @@ jobs:
       - name: Upload Release Asset
         uses: softprops/action-gh-release@v2
         with:
-          token: ${{ secrets.RELEASE_TOKEN }}
+          token: ${{ github.token }}
           files: |
             sarasa-nerd/SarasaTermSCNerd-Unhinted.ttf.tar.gz
             sarasa-nerd/SarasaTermSCNerd-Unhinted.ttc.tar.gz
