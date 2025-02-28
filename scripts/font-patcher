@@ -2307,9 +2307,9 @@ def main():
         f.close()
 
 def zh_family(name):
-    res = name.replace(looseName, "更纱终端书呆黑体-简")
-    res = res.replace(compactName, "更纱终端书呆黑体-简")
-    return res
+    #res = name.replace(looseName, "更纱终端书呆黑体-简")
+    #res = res.replace(compactName, "更纱终端书呆黑体-简")
+    return name
 
 def en_subfamily(compact):
     return compact.replace("Italic", " Italic").strip()
