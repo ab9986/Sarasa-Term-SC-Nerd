@@ -39,26 +39,19 @@ jobs:
         id: get_version
         run: echo "VERSION=${GITHUB_REF#refs/tags/}" >> $GITHUB_OUTPUT
 
-      - name: Create Release
-        id: create_release
-        uses: softprops/action-gh-release@v2
-        with:
-          token: ${{ github.token }}
-          name: Release ${{ steps.get_version.outputs.VERSION }}
-          tag_name: ${{ steps.get_version.outputs.VERSION }}
-          draft: false
-          prerelease: false
-
       - name: Upload Release Asset
-        uses: softprops/action-gh-release@v2
+        uses: svenstaro/upload-release-action@v2
         with:
-          token: ${{ github.token }}
+          repo_token: ${{ github.token }}
           files: |
             sarasa-nerd/SarasaTermSCNerd.ttf.tar.gz
             sarasa-nerd/SarasaTermSCNerd.ttc.tar.gz
             sarasa-nerd/SarasaTermSCNerd.ttf.7z
-            sarasa-nerd/SarasaTermSCNerd.ttc.7z
-
+            sarasa-nerd/SarasaTermSCNerd.ttc.7z   
+          name: Release ${{ steps.get_version.outputs.VERSION }}
+          tag_name: ${{ steps.get_version.outputs.VERSION }}            
+          draft: false
+          prerelease: false 
       - name: Clear files
         run: |
           rm -rvf *.7z
@@ -86,11 +79,15 @@ jobs:
           cd ..
 
       - name: Upload Release Asset
-        uses: softprops/action-gh-release@v2
+        uses: svenstaro/upload-release-action@v2
         with:
-          token: ${{ github.token }}
+          repo_token: ${{ github.token }}
           files: |
             sarasa-nerd/SarasaTermSCNerd-Unhinted.ttf.tar.gz
             sarasa-nerd/SarasaTermSCNerd-Unhinted.ttc.tar.gz
             sarasa-nerd/SarasaTermSCNerd-Unhinted.ttf.7z
-            sarasa-nerd/SarasaTermSCNerd-Unhinted.ttc.7z
+            sarasa-nerd/SarasaTermSCNerd-Unhinted.ttc.7z   
+          name: Release ${{ steps.get_version.outputs.VERSION }}
+          tag_name: ${{ steps.get_version.outputs.VERSION }}            
+          draft: false
+          prerelease: false             
