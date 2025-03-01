@@ -18,7 +18,7 @@ projectName = "Nerds"
 projectNameAbbreviation = ""
 projectNameSingular = projectName[:-1]
 subFamily = ""
-looseName = "Sarasa Term SC Nerd"
+looseName = "SarasaTermSCNerd"
 compactName = "SarasaTermSCNerd"
 
 import sys
