@@ -37,7 +37,10 @@ jobs:
 
       - name: Get version
         id: get_version
-        run: echo "VERSION=${GITHUB_REF#refs/tags/}" >> $GITHUB_OUTPUT
+        run: |
+          ts=`date +'%Y%m%d'`
+          version=`echo ${{ github.run_number }}.${ts}`
+          echo "version=${version}" >> $GITHUB_ENV
 
       - name: Upload Release Asset
         uses: svenstaro/upload-release-action@v2
@@ -45,8 +48,8 @@ jobs:
           repo_token: ${{ github.token }}
           file: ./sarasa-nerd/*{.gz,.7z}
           file_glob: true    
-          name: Release ${{ steps.get_version.outputs.VERSION }}
-          tag_name: ${{ steps.get_version.outputs.VERSION }}            
+          name: SarasaTermSCNerd_${{ env.version }}
+          tag_name: SarasaTermSCNerd_${{ env.version }}           
           draft: false
           prerelease: false 
       - name: Clear files
@@ -81,7 +84,7 @@ jobs:
           repo_token: ${{ github.token }} 
           file: ./sarasa-nerd/*{.gz,.7z}
           file_glob: true            
-          name: Release ${{ steps.get_version.outputs.VERSION }}
-          tag_name: ${{ steps.get_version.outputs.VERSION }}            
+          name: SarasaTermSCNerd_${{ env.version }}
+          tag_name: SarasaTermSCNerd_${{ env.version }}       
           draft: false
           prerelease: false             
