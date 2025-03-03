@@ -48,8 +48,8 @@ jobs:
           repo_token: ${{ github.token }}
           file: ./sarasa-nerd/*{.gz,.7z}
           file_glob: true    
-          name: SarasaTermSCNerd_${{ env.version }}
-          tag_name: SarasaTermSCNerd_${{ env.version }}           
+          tag: SarasaTermSCNerd_${{ env.version }}   
+          release_name: SarasaTermSCNerd_${{ env.version }}     
           draft: false
           prerelease: false 
       - name: Clear files
@@ -84,7 +84,7 @@ jobs:
           repo_token: ${{ github.token }} 
           file: ./sarasa-nerd/*{.gz,.7z}
           file_glob: true            
-          name: SarasaTermSCNerd_${{ env.version }}
-          tag_name: SarasaTermSCNerd_${{ env.version }}       
+          tag: SarasaTermSCNerd_${{ env.version }}   
+          release_name: SarasaTermSCNerd_${{ env.version }}         
           draft: false
           prerelease: false             
