@@ -8,7 +8,7 @@ from __future__ import absolute_import, print_function, unicode_literals
 # Change the script version when you edit this script:
 script_version = "3.6.1"
 
-version = "2.3.3"
+version = "3.3.0"
 subFamily = ""
 projectName = "Nerds"
 projectNameAbbreviation = "NF"
