@@ -6,7 +6,6 @@ sarasa_nerd_dir="sarasa-nerd"
 mkdir -p $sarasa_nerd_dir
 cd $sarasa_nerd_dir
 
-
 for item in ../"$sarasa_dir"/*; do
   if [ -f "$item" ]; then
     extension="${item##*.}"
